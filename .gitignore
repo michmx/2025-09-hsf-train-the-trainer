@@ -1,0 +1,51 @@
+# OS files
+.DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Editor/IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.dist-info/
+build/
+dist/
+.python-version
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+.jupyter_cache/
+.jupyterlab-settings/
+
+# Jupyter Book / Sphinx
+# Ignore built HTML, doctrees, and autosummary anywhere in the repo
+**/_build/
+**/.doctrees/
+**/_autosummary/
+# Explicitly ignore the book build in this project structure
+creating_a_training_module/creating_a_training_module/_build/
+
+# Tests and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Caches and logs
+.cache/
+*.log
