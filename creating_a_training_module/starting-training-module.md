@@ -3,7 +3,10 @@
 This chapter shows trainers in the HEP community how to develop and publish a self‑contained training module 
 using Jupyter Book and the cookiecutter template. 
 
-## Prerequisites
+## Installation
+
+We require 
+
 - Python 3.9+ with a virtual environment (venv or conda/mamba).
 - `jupyter-book` and related tools (see this repository’s `requirements.txt`).
 - Optional but recommended: `cookiecutter` 
@@ -27,11 +30,9 @@ cd your-book-name
 
 Key files: `_config.yml` (book metadata), `_toc.yml` (structure), content pages (`.md`, `.ipynb`).
 
-## Authoring Content 
+## Adding Content
 
-- Prefer MyST Markdown for lessons; use notebooks when execution is required.
-- Keep one concept per page; add exercises with solutions in collapsible sections.
-- Cite datasets, software, and papers; keep a `references.bib` and use `{cite}`.
+Add exercises with solutions in collapsible sections.
 
 ````md
 ```{admonition} Learning objectives
@@ -39,6 +40,8 @@ Key files: `_config.yml` (book metadata), `_toc.yml` (structure), content pages 
 - Plot with `matplotlib`/`mplhep`
 ```
 ````
+
+Cite datasets, software, and papers; keep a `references.bib` and use `{cite}`.
 
 ## Environments and Reproducibility
 
