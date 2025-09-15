@@ -45,25 +45,35 @@ Cite datasets, software, and papers; keep a `references.bib` and use `{cite}`.
 
 ## Environments and Reproducibility
 
-For modules using ROOT/Scikit‑HEP, provide an environment and pin versions.
+For modules using packages, prefer a Python virtual environment (venv) and a pinned `requirements.txt`.
 
-```yaml
-# environment.yml (conda)
-name: hep-training
-channels: [conda-forge]
-dependencies:
-  - python=3.11
-  - jupyter
-  - jupyter-book
-  - matplotlib
-  - numpy
-  - uproot
-  - awkward
-  - mplhep
-  - root-base  # optional; Linux/macOS via conda-forge
+```bash
+# Create and activate a venv
+python -m venv venv
+source venv/bin/activate
+
+# Install from your requirements file
+pip install -r creating_a_training_module/requirements.txt
+
+# (Optional) capture an exact lock for reproducibility
+pip freeze > creating_a_training_module/requirements.lock
 ```
 
-Commit `environment.yml` (or `requirements.txt`) and show learners how to activate it.
+Example `creating_a_training_module/requirements.txt`:
+
+```text
+jupyter-book==1.0.4
+myst-parser==3.0.1
+myst-nb==1.3.0
+mdit-py-plugins==0.4.2
+numpy
+matplotlib
+mplhep
+awkward
+uproot
+```
+
+Commit `creating_a_training_module/requirements.txt` (and optionally `requirements.lock`) and show learners how to activate the venv and install dependencies.
 
 ## Build, Check, and Preview
 ```bash
@@ -73,11 +83,4 @@ python -m http.server -d _build/html 8000
 ```
 Open http://localhost:8000 to preview.
 
-## Publish
-- GitHub Pages (manual): `ghp-import -n -p -f _build/html`
-- Or enable the CI option in cookiecutter and push; Actions will build and publish to `gh-pages`.
 
-## Trainer Tips
-- Start each chapter with objectives and time estimates; end with a summary and checks for understanding.
-- Keep runtime under 2–3 minutes per executed page; cache heavy outputs.
-- Provide solutions and a short “further reading” list tailored to HEP.
