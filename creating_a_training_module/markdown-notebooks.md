@@ -121,8 +121,11 @@ pip install -r requirements.txt
 Now we can use sklearn to build a regression model for our problem:
 
 ````md
+Let's use Scikit-Learn's `LinearRegression`
+
 ```{code-cell} ipython3
 from sklearn.linear_model import LinearRegression
+import numpy as np
 ```
 
 ```{code-cell} ipython3
