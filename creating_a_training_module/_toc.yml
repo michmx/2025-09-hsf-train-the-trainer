@@ -4,6 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
+- file: starting-training-module
 - file: markdown-notebooks
+- file: github-ci
