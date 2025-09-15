@@ -1,11 +1,44 @@
-# Welcome to your Jupyter Book
+# Creating a Training Module: A Train-the-Trainer Guide
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+A comprehensive guide for developing effective training modules using Jupyter Book, specifically designed for researchers 
+with machine learning experience who want to become trainers in the HEP community.
 
-Check out the content pages bundled with this sample book to see more.
+This program focuses on the **development** of training materials, equipping you with the 
+technical skills to create engaging and reproducible training content.
+
+## Learning Objectives
+
+- **Create interactive, reproducible content** using Jupyter Book and MyST Markdown
+- **Set up automated workflows** with GitHub Actions for continuous integration and deployment
+- **Provide seamless student setup** using GitHub Codespaces
+
+## Prerequisites
+
+### Technical Skills
+- **Python programming** (you should be comfortable with packages, virtual environments)
+- **Basic Git/GitHub knowledge** (clone, commit, push, pull requests)
+- **Command line familiarity** (running commands, navigating directories)
+
+### Software Requirements
+- Python 3.9+ 
+- Git and a GitHub account
+- A code editor
+- Modern web browser
+- Access to create GitHub Codespaces (free tier is sufficient)
+
+## Table of Content
 
 ```{tableofcontents}
 ```
+
+## Additional Resources
+
+### Official Documentation
+- [Jupyter Book](https://jupyterbook.org)
+- [MyST Markdown Guide](https://myst-parser.readthedocs.io/)
+- [GitHub Actions](https://docs.github.com/en/actions)
+- [GitHub Codespaces](https://docs.github.com/en/codespaces)
+
+### Other Resources
+- [Software Carpentry Instructor Training](https://carpentries.github.io/instructor-training/)
+- [HSF Training Center](https://hepsoftwarefoundation.org/training/center.html)
