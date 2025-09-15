@@ -10,7 +10,7 @@ technical skills to create engaging and reproducible training content.
 
 - **Create interactive, reproducible content** using Jupyter Book and MyST Markdown
 - **Set up automated workflows** with GitHub Actions for continuous integration and deployment
-- **Provide seamless student setup** using GitHub Codespaces
+- **Provide seamless student setup** using `requirements.txt` 
 
 ## Prerequisites
 
@@ -24,7 +24,6 @@ technical skills to create engaging and reproducible training content.
 - Git and a GitHub account
 - A code editor
 - Modern web browser
-- Access to create GitHub Codespaces (free tier is sufficient)
 
 ## Table of Content
 
