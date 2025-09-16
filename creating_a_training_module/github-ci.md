@@ -3,12 +3,53 @@
 This chapter shows how to use GitHub Actions to validate and publish your Jupyter Book. 
 It targets HEP trainers building modules with this repository layout.
 
-## Setup
-- Push your repository to GitHub.
-- In Repository Settings / Pages, set “Build and deployment” to “GitHub Actions”.
-- Ensure `requirements.txt` includes `jupyter-book` (and any dependencies for executing the book).
+## Start a Git repository in the book directory
+
+```bash
+cd YOUR_BOOK_DIRECTORY
+git init
+```
+
+This will create `.git/` in your book directory.
+
+```{warning}
+Never modify the `.git/` directory! Use git commands to manage your repository. 
+```
+
+Create a `.gitignore` file to exclude unnecessary files. For example;
+
+```text 
+# Content of .gitignore
+_build/
+__pycache__/
+```
+
+Add everything and make the initial commit:
+
+```bash 
+git add .
+git commit -m "Initial commit"
+```
+
+## Create a GitHub repository
+
+Create a new repository on GitHub (do not initialize with README, .gitignore, or license).
+
+Follow the instructions to add your remote and push the initial commit. Basically, something like:
+
+```bash
+git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
+git branch -M main
+git push -u origin main
+```
+
+In Repository Settings / Pages, set “Build and deployment” to “GitHub Actions”.
+ 
 
 ## Recommended Workflow (Actions)
+
+Ensure `requirements.txt` includes `jupyter-book` (and any dependencies for executing the book).
+
 Create `.github/workflows/book.yml`:
 
 ```yaml
@@ -61,6 +102,9 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 ```
+
+Commit and push this file to `main`. Look at the Actions tab to see the workflow running.
+
 
 ## PR Testing and Link Checks
 - The workflow builds on every PR; failures block merges.
