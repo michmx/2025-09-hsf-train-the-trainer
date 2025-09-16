@@ -105,6 +105,13 @@ jobs:
 
 Commit and push this file to `main`. Look at the Actions tab to see the workflow running.
 
+And done! Every push to `main` will rebuild and deploy your book. 
+
+```{tip}
+You can customize the workflow as needed, e.g. to rebuild the book daliy for checking 
+that the material is up to date with the most recent package versions.
+```
+
 
 ## PR Testing and Link Checks
 - The workflow builds on every PR; failures block merges.
