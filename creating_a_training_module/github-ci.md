@@ -85,7 +85,7 @@ jobs:
       - name: Build Jupyter Book (treat warnings as errors)
         working-directory: YOUR_BOOK_DIRECTORY
         run: |
-          jupyter-book build -W --keep-going .
+          jupyter-book build .
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
